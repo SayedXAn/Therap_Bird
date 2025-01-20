@@ -1,0 +1,25 @@
+Changes for Flappy Bird (Therap Bird):
+
+Remove the timeline at the beginning. - DONE
+
+Please remove all the wrong answer circles from the game. Only have correct answers in the gaps. And the rest of the gaps just keep blank. - DONE
+
+Can the text of the circles be changed to Dark Blue so it’s easier to read? - DONE
+
+Change "Ask Boss for a Raise" to "You Win!" and change "You’re Better Than This" to "Try Again!". - DONE
+
+“Person-Centered. Data-Driven.” As per our logo, one after the other on the left side. - DONE
+
+THE GAME WILL HAVE A  LEADERBOARD since it is already developed. - DONE
+
+Gameplay will start with a slower speed and larger gaps between the pillars, making it easier for players initially. -DONE. speed >> 20-30-40-50
+
+As players progress, the game will gradually increase in speed, and the gaps between pillars will decrease, making it more challenging. -DONE. speed >> 20-30-40-50
+
+Players will earn points by collecting correct answers presented during gameplay. - DONE +5 points
+
+No wrong answers will be included, ensuring a positive and motivating experience. - DONE
+
+Bonus point in between pillars. - DONE +2 points
+
+Upon crossing the entire finish line,  players will get 20 points. - DONE

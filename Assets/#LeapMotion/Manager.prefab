@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7368351098269247036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7368351098269247037}
+  - component: {fileID: 7368351098269247026}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7368351098269247037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368351098269247036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7368351098269247026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368351098269247036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92786453fb46bf4992ef14444e04e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  pageVideo:
+  - mainClip: {fileID: 32900000, guid: 208f09288e52e544ab5e859f8db37e9c, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: 5ca7f315d5bc12f4090e5eb9b689793e, type: 3}
+    - {fileID: 32900000, guid: 54a05ad2cdc23ba419f0785de3c0481a, type: 3}
+  - mainClip: {fileID: 32900000, guid: cd0bb3a1e98592d45a20f500f2fe5e8c, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: f7f3bf50126c8a94db1e33ad749c7a82, type: 3}
+    - {fileID: 32900000, guid: 94606d937a8bdc04da9941ad369e8131, type: 3}
+  - mainClip: {fileID: 32900000, guid: 9446cadf083a9c14cb4ae94ac516a057, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: 3630b18c106ea2c4a8fa9a366629e086, type: 3}
+    - {fileID: 32900000, guid: b0548c6ea8848c84cbb15f3699eb0f62, type: 3}
+  - mainClip: {fileID: 32900000, guid: e7e378228de3dcc42b198a854eea3bd5, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: 6f51636f8c97e0945ab40a5d04c49e1a, type: 3}
+    - {fileID: 32900000, guid: 764771cb1b4e6da45abc849fbc30d764, type: 3}
+  - mainClip: {fileID: 32900000, guid: b6671143394753041b54b2805b197c3e, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: 27a6a9086c397e24fa4442e1e736a7d7, type: 3}
+    - {fileID: 32900000, guid: cc85abed6ede97f4ca0fa0a55f8e5fc4, type: 3}
+  - mainClip: {fileID: 32900000, guid: 7b960bc20f9465744b6e6171c68829e8, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: 67a8c242163538e44b5cb191c418d2b2, type: 3}
+    - {fileID: 32900000, guid: 0a7c96bec7365ae428aa669683a2f940, type: 3}
+  - mainClip: {fileID: 32900000, guid: bc08658e6bcd3364292aa13d5da43ec6, type: 3}
+    transiTions:
+    - {fileID: 32900000, guid: 67a8c242163538e44b5cb191c418d2b2, type: 3}
+    - {fileID: 32900000, guid: 0a7c96bec7365ae428aa669683a2f940, type: 3}
