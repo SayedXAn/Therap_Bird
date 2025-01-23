@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FlappyBird.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 27d2949a33bbf8e45bb1d99b462405f5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6beaa60cde74e3b47af8b7420849bcb3, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 327994a5dcd89aa4aa828679bc12d189, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8dcc7e4ca77481a4587d91f0e1dcde01, type: 2}

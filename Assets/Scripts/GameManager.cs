@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public GameObject preGame;
     public GameObject mainCamera;
     public GameObject GOWTextBG;
+    public GameObject CongoImage;
     public AudioSource BGMaudioSource;
     public AudioSource SFXaudioSource;
     public TMP_Text gameOverWinText;
@@ -35,8 +36,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text wrongIndicator;
     public TMP_Text preGameCountDownText;
     public TMP_InputField nameIF;
-    public Image gwImg;
-    public Image goImg;
     public Slider speedSlider;
     public Text speedSliderText;
     public AudioClip[] audioClips;
@@ -56,7 +55,7 @@ public class GameManager : MonoBehaviour
     public float wheelSensitivity = 10f;
     public float leapSens = 30000f;
     public Optimization opt;
-    public LBManager LBManager;
+    //public LBManager LBManager;
     public LeapPointerController LPCon;
     public GameObject LPointer;
 
@@ -188,8 +187,8 @@ public class GameManager : MonoBehaviour
 
     public void BirdHitObstacle()
     {
-        LBManager.SetEntry(nameIF.text, score);
-        StartCoroutine(ShowPosition());
+        //LBManager.SetEntry(nameIF.text, score);
+        //StartCoroutine(ShowPosition());
         isGameRunning = false;
         birdHitObstacle = true;
         mainCanvas.SetActive(true);
@@ -197,8 +196,8 @@ public class GameManager : MonoBehaviour
         pipes.SetActive(false);
         gameUI.SetActive(false);
         GOWTextBG.SetActive(true);
-        gameOverWinText.text = "Your score: " + score.ToString() + "\n "; 
-        goImg.gameObject.SetActive(true);
+        gameOverWinText.text = nameIF.text + "\nScore: " + score.ToString() ;
+        CongoImage.gameObject.SetActive(true);
         BGMaudioSource.Stop();
         SFXaudioSource.clip = audioClips[1];
         SFXaudioSource.Play();        
@@ -207,12 +206,12 @@ public class GameManager : MonoBehaviour
     }
     public void BirdHitGameWinObs()
     {
-        LBManager.SetEntry(nameIF.text, score);
-        StartCoroutine(ShowPosition());
+        //LBManager.SetEntry(nameIF.text, score);
+        //StartCoroutine(ShowPosition());
         isGameRunning = false;
         opt.enabled = false;
-        pipes.SetActive(false);        
-        gwImg.gameObject.SetActive(true);
+        pipes.SetActive(false);
+        CongoImage.gameObject.SetActive(true);
         gameUI.SetActive(false);
         score += 20;
         rightIndicator.GetComponent<TMP_Text>().text = "+20";
@@ -220,7 +219,7 @@ public class GameManager : MonoBehaviour
         rightSequence.Append(rightIndicator.DOFade(1f, 0.3f));
         rightSequence.Append(rightIndicator.DOFade(0f, 0.3f));
         GOWTextBG.SetActive(true);
-        gameOverWinText.text = "Your score: " + score.ToString() + "\n ";
+        gameOverWinText.text = nameIF.text + "\nScore: " + score.ToString();
         BGMaudioSource.clip = audioClips[1];
         BGMaudioSource.Play();
         StartCoroutine(GameOverOrWin());
@@ -270,13 +269,14 @@ public class GameManager : MonoBehaviour
     {
         //bird.transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
         yield return new WaitForSeconds(gameOverPanelTime);
+        SceneManager.LoadScene("FlappyBird");
         //SceneManager.LoadScene("FlappyBird");
-        gameUI.SetActive(false);
+        /*gameUI.SetActive(false);
         mainGame.SetActive(false);
         mainMenu.SetActive(false);
         gameUI.SetActive(false);
-        Destroy(mainGame);
-        LBManager.GenerateLeaderboard();
+        Destroy(mainGame);*/
+        //LBManager.GenerateLeaderboard();
     }
     public void StartButton()
     {
@@ -291,7 +291,6 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator PreGameMenu()
     {
-        //mainCanvas.SetActive(false);
         preGame.SetActive(true);
         isPreGameON = true;
         mainMenu.SetActive(false);
@@ -334,14 +333,17 @@ public class GameManager : MonoBehaviour
 
     public void CameraXPosition()
     {
-        mainCamera.transform.position = new Vector3(bird.transform.position.x+60f, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        if(mainCamera.transform.position.x < 2195.2f)
+        {
+            mainCamera.transform.position = new Vector3(bird.transform.position.x + 60f, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        }
         //mainCamera.transform.Translate(Vector3.right * Time.deltaTime * speed);
     }
     public void SetPlayerPos(int pos)
     {
         playerPos = pos;
     }
-    IEnumerator ShowPosition()
+    /*IEnumerator ShowPosition()
     {
         yield return new WaitForSeconds(0.1f);
         if (playerPos == -2)
@@ -357,7 +359,10 @@ public class GameManager : MonoBehaviour
             }
             StopCoroutine(ShowPosition());
         }
+    }*/
+    public bool IsGameRunning()
+    {
+        return isGameRunning;
     }
-
 }
 
